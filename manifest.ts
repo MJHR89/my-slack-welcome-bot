@@ -2,7 +2,6 @@ import { Manifest } from "deno-slack-sdk/mod.ts";
 import { MessageSetupDatastore } from "./datastores/messages.ts";
 import { MessageSetupWorkflow } from "./workflows/create_welcome_message.ts";
 import { SendWelcomeMessageWorkflow } from "./workflows/send_welcome_message.ts";
-import SampleObjectDatastore from "./datastores/sample_datastore.ts";
 
 /**
  * The app manifest contains the app's configuration. This
