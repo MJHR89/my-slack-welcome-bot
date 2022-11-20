@@ -58,7 +58,26 @@ const setupFunction: SlackFunctionHandler<
       outputs: {},
     };
   } else {
-    console.log("The message was successfully created");
+    const triggerResponse = await client.workflows.triggers.create({
+      type: "event",
+      name: "Member joined response",
+      description: "Triggers when member joined",
+      workflow: "#/workflows/send_welcome_message",
+      event: {
+        event_type: "slack#/events/user_joined_channel",
+        channel_ids: [inputs.channel],
+      },
+      inputs: {
+        channel: {
+          value: "{{data.channel_id}}",
+        },
+        triggered_user: {
+          value: "{{data.user_id}}",
+        },
+      },
+    });
+
+    console.log(triggerResponse);
     return await {
       outputs: {},
     };
