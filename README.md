@@ -146,7 +146,7 @@ $ cd my-app
   [deploy](#deploying-your-app) our app.
 - Second, we need to create a [Link Trigger](#create-a-link-trigger).
 - Lastly, we're gonna paste our link trigger into our sandbox workspace and test
-  the whole flow!
+  the whole flow! Have fun!
 
 ## Create a Link Trigger
 
