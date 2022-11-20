@@ -1,5 +1,5 @@
 import { Manifest } from "deno-slack-sdk/mod.ts";
-import SampleWorkflow from "./workflows/sample_workflow.ts";
+import { MessageSetupWorkflow } from "./workflows/create_welcome_message.ts";
 import SampleObjectDatastore from "./datastores/sample_datastore.ts";
 
 /**
@@ -11,7 +11,7 @@ export default Manifest({
   name: "slack-deno-starter-template",
   description: "A template for building Slack apps with Deno",
   icon: "assets/default_new_app_icon.png",
-  workflows: [SampleWorkflow],
+  workflows: [MessageSetupWorkflow],
   outgoingDomains: [],
   datastores: [SampleObjectDatastore],
   botScopes: [
