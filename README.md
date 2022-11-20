@@ -47,7 +47,7 @@ Start by cloning this repository:
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-app -t MJHR89/my-slack-welcome-bot/start
+$ slack create my-app -t MJHR89/my-slack-welcome-bot
 
 # Change into this project directory
 $ cd my-app
