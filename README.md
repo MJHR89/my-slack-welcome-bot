@@ -70,6 +70,7 @@ $ cd my-app
   the message in the datastore. In this step you can add it as a step and pass
   the arguments (message, channel, author), in step 3 branch we're going to
   define it and implement it.
+- Add your workflow to the manifest definition.
 
 ## Step 2: Initialize the Datastore
 
@@ -115,6 +116,7 @@ $ cd my-app
 - Define the workflow (channel, triggered_user)
 - Workflow **Step 1**: custom Function to get message from datastore (channel,
   triggered_user)
+- Add your workflow to the manifest definition.
 
 ## Step 6: Create Event Trigger
 
