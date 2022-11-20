@@ -17,10 +17,11 @@ export default Manifest({
   outgoingDomains: [],
   datastores: [MessageSetupDatastore],
   botScopes: [
-    "commands",
     "chat:write",
     "chat:write.public",
     "datastore:read",
     "datastore:write",
+    "channels:read",
+    "triggers:write",
   ],
 });
