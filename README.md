@@ -2,8 +2,8 @@
 
 This sample app is a Welcome Bot that helps create, store and send friendly
 welcome messages when a user joins a channel. This is a step by step (branch by
-branch) version of the Welcome Bot app that you can find at
-github.com/slack-samples/deno-welcome-bot.
+branch) version of the Welcome Bot app for learning purposes. You can find the
+sample app at github.com/slack-samples/deno-welcome-bot.
 
 **Guide Outline**:
 
@@ -65,11 +65,14 @@ $ cd my-app
   [SendEphemeralMessage](https://api.slack.com/future/functions#send-ephemeral-message)
   builtin function to confirm that the message was successfully created
   (channel_id, user_id and message)
+- In the functions folder create a new file (i.e. create_welcome_message.ts),
+  and leave it empty for now. Return to the workflow.
 - Workflow **Step 3**: create a
   [custom function](https://api.slack.com/future/functions/custom) to persist
   the message in the datastore. In this step you can add it as a step and pass
   the arguments (message, channel, author), in step 3 branch we're going to
-  define it and implement it.
+  define it and implement it. But you can now import it from the function file
+  you just created.
 - Add your workflow to the manifest definition.
 
 ## Step 2: Initialize the Datastore
@@ -81,7 +84,6 @@ $ cd my-app
 
 ## Step 3: Create the Custom Function to Save the Message
 
-- In the functions folder create a new file (i.e. create_welcome_message.ts)
 - Define the function (message, channel, author)
 - Implement the function to save the inputs into datastore
   - Import the [SlackAPI library](https://api.slack.com/future/apicalls#import)
@@ -125,6 +127,7 @@ $ cd my-app
   SendMessageWorkflow using an
   [event trigger](https://api.slack.com/future/triggers/event#create-runtime)
   that listens to the `user_joined_channel` event.
+- Add the `channels:read` scope to the manifest.
 
 ## Step 7: Create the Link Trigger Definition for the Create Message Workflow
 
@@ -132,6 +135,7 @@ $ cd my-app
   create_welcome_message_shortcut.ts)
 - It invokes the create welcome message workflow (workflow name in snake_case)
   - Interactivity, channel
+- Add the `triggers:write` scope to the manifest.
 
 ---
 
